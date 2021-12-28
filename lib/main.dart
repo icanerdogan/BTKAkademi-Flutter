@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:temelwidget/screens/student_add.dart';
+import 'package:temelwidget/screens/student_edit.dart';
 import 'models/student.dart';
 
 //Flutter için herşey widgetlardan oluşur!
@@ -88,7 +90,9 @@ class _MyAppState extends State<MyApp> {
                     Text("Ekle"),
                   ],
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => StudentAdd(students)));
+                },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.green,
                 ),
@@ -105,7 +109,9 @@ class _MyAppState extends State<MyApp> {
                     Text("Güncelle"),
                   ],
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => StudentEdit(selectedStudent)));
+                },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.amber,
                 ),

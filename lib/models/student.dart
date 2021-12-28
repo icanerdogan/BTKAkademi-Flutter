@@ -1,5 +1,5 @@
 class Student{
-  int id;
+  int id = 0;
   String firstName = "";
   String lastName = "";
   int grade = 0;
@@ -7,6 +7,7 @@ class Student{
 
 
   Student.withId(this.id, this.firstName, this.lastName, this.grade);
+  Student.withoutInfo(){}
 
   String get getFirstName{
     return "OGR - " + firstName;
